@@ -1,5 +1,5 @@
 const fs = require('fs-extra'); 
-const pathFile = __dirname + '/cache/autoseen.txt';
+const pathFile = __dirname + 'autoseen.txt';
 
 if (!fs.existsSync(pathFile)) { fs.writeFileSync(pathFile, 'false'); }
 
