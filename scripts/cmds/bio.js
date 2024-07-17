@@ -2,14 +2,14 @@ module.exports = {
   config: {
     name: "bio",
     version: "NaN",
-    author: "NaN",
+    author: "Edited By AceGerome",
     countDown: 5,
     role: 2,
     shortDescription: "Change the Bot Bio", 
     longDescription: {
       en: "Change the bot bio",
     },
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗",
+    category: "System",
     guide: {
        en: "{pn} <text>",
     },
