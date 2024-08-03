@@ -10,12 +10,11 @@ module.exports = {
     version: "1.4",
     author: "tor maire chudi",
     countDown: 5,
-    role: 1,
-    shortDescription: "Enable/disable auto seen when new message is available",
-    longDescription: {
+    role: 2,
+    description: {
         en: "Enable/disable auto seen when new message is available."
     }, 
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗", 
+    category: "admin", 
     guide: {
       en: "To use this command, type {pn} on to enable autoseen and {pn} off to disabled."
     } 
