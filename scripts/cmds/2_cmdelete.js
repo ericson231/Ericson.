@@ -8,12 +8,7 @@ module.exports = {
     author: "AceGerome",
     countDown: 5,
     role: 2,
-    shortDescription: {
-      vi: "",
-      en: "Delete file provided by user."
-    },
-    longDescription: {
-      vi: "",
+    description: {
       en: "Delete the file provided by User."
     },
     category: "owner",
@@ -35,18 +30,18 @@ onStart: async function({ api, event, args, message }) {
 
   const filename = args[0];
 
-  const filePath = `./scripts/cmds/${filename}`;
+  const filePath = __dirname + `${filename}.js`;
 
-  console.log(`Attempting to delete: ${filePath}`);
+  console.log(`Attempting to delete: ${filePath}.js`);
 
   try {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
       message.reply(`Command ${filename} has been deleted.`, threadID);
-      console.log(`Deleted: ${filePath}`);
+      console.log(`Deleted: ${filePath}.js`);
     } else {
-      message.reply(`File ${filename} not found. No commands were deleted.`, threadID);
-      console.log(`File not found: ${filePath}`);
+      message.reply(`File ${filename}.jd not found. No commands were deleted.`, threadID);
+      console.log(`File not found: ${filePath}.js`);
     }
   } catch (error) {
     message.reply("An error occurred while deleting the command.", threadID);
