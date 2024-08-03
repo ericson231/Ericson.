@@ -7,10 +7,9 @@ module.exports = {
     aliases: ["couple"], 
     version: "1.1",
     author: "JV Barcenas",
-    countDown: 5,
+    countDown: 30,
     role: 0,
-    shortDescription: "Pair image",
-    longDescription: "Pair image",
+    description: "Pair image",
     category: "fun",
     guide: {
       en: "     {pn} @tag1 @tag2",
