@@ -3,15 +3,12 @@ const axios = require('axios');
 module.exports = {
   config: {
     name: 'chess',
-    aliases: ['chess'],
+    //aliases: ['chess'],
     version: '1.0',
     author: 'AceGerome',
-    countDown: 5,
+    countDown: 15,
     role: 0,
-    shortDescription: {
-      en: 'Generate random Chess quotes and tips.'
-    },
-    longDescription: {
+    description: {
       en: 'Generate random Chess quotes and tips.'
     },
     category: 'fun',
@@ -21,7 +18,7 @@ module.exports = {
     }
   },
   onStart: async function({ args, event, message }) {
-    const action = args[];
+    const action = args[0];
     try {
       if (action === 'quotes') {
         const Url = 'https://raw.githubusercontent.com/AceAkira1017/JSON/main/quotes.json';
