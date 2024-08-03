@@ -33,7 +33,7 @@ module.exports = {
 
   onStart: async function ({ args, message, api, event }) {
     const { senderID } = event;
-    const announcementFilePath = path.join(__dirname, '/JSON/announcement.txt');
+    const announcementFilePath = path.join(__dirname, 'announcement.txt');
 
     
     if (args[0] === 'post' || args[0] === 'create') {
