@@ -8,13 +8,10 @@ module.exports = {
     author: "jfhigtfdv",
     countDown: 5,
     role: 2,
-    shortDescription: {
-      en: "Create a new post on Facebook."
-    },
-    longDescription: {
+    description: {
       en: "Create a new post on Facebook with text, images, and video."
     },
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗",
+    category: "owner",
     guide: {
       en: "{pn} - post"
     }
@@ -147,11 +144,11 @@ module.exports = {
         for (const attach of attachments) {
           if (attach.type === "photo") {
             const getFile = (await axios.get(attach.url, { responseType: "arraybuffer" })).data;
-            fs.writeFileSync(__dirname + `/cache/imagePost.png`, Buffer.from(getFile));
-            allStreamFile.push(fs.createReadStream(__dirname + `/cache/imagePost.png`));
+            fs.writeFileSync(__dirname + `/tmp/imagePost.png`, Buffer.from(getFile));
+            allStreamFile.push(fs.createReadStream(__dirname + `/tmp/imagePost.png`));
           } else if (attach.type === "video") {
             const videoFile = await axios.get(attach.url, { responseType: "stream" });
-            const videoPath = __dirname + `/cache/videoPost.mp4`;
+            const videoPath = __dirname + `/tmp/videoPost.mp4`;
             videoFile.data.pipe(fs.createWriteStream(videoPath));
             allStreamFile.push(fs.createReadStream(videoPath));
           }
@@ -187,8 +184,8 @@ module.exports = {
           const urlPost = info.data.story_create.story.url;
           if (!postID) throw info.errors;
           try {
-            fs.unlinkSync(__dirname + "/cache/imagePost.png");
-            fs.unlinkSync(__dirname + "/cache/videoPost.mp4");
+            fs.unlinkSync(__dirname + "/tmp/imagePost.png");
+            fs.unlinkSync(__dirname + "/tmp/videoPost.mp4");
           } catch (e) {}
           return api.sendMessage(`» Post created successfully\n» postID: ${postID}\n» urlPost: ${urlPost}`, threadID, messageID);
         } catch (e) {
