@@ -1,0 +1,404 @@
+{
+  "truth": [
+    {
+      "id": 1,
+      "question": "Ano ang pinakamalaking pagsisisi mo sa buhay?"
+    },
+    {
+      "id": 2,
+      "question": "Sa tingin mo ba ay mahalaga ang pera sa pag-ibig?"
+    },
+    {
+      "id": 3,
+      "question": "Kailan ka huling umiyak at bakit?"
+    },
+    {
+      "id": 4,
+      "question": "Sino ang pinakamalaking inspirasyon mo sa buhay?"
+    },
+    {
+      "id": 5,
+      "question": "Ano ang iyong pinakagusto at pinakainis sa iyong sarili?"
+    },
+    {
+      "id": 6,
+      "question": "Paano mo haharapin ang isang malaking pagsubok sa buhay mo?"
+    },
+    {
+      "id": 7,
+      "question": "Sa tingin mo ba ay totoo ang kasabihang 'love is blind'?"
+    },
+    {
+      "id": 8,
+      "question": "Ano ang pinakamalalim na pangarap mo sa buhay?"
+    },
+    {
+      "id": 9,
+      "question": "Kailangan mo ba ng validation mula sa ibang tao upang maging masaya?"
+    },
+    {
+      "id": 10,
+      "question": "Kung may tatanggalin kang isang bagay sa iyong buhay, ano ito at bakit?"
+    },
+    {
+      "id": 11,
+      "question": "Anong karanasan sa buhay ang pinakamalakas na nag-udyok sa iyo na maging mas matapang?"
+    },
+    {
+      "id": 12,
+      "question": "Anu-ano sa palagay mo ang mga katangian ng iniibig mo na hindi mo kayang palampasin?"
+    },
+    {
+      "id": 13,
+      "question": "Paano mo haharapin ang isang situwasyon kung saan kailangan mong piliin ang pagiging tapat o magiging mapanlamang?"
+    },
+    {
+      "id": 14,
+      "question": "Mayroon ka bang isang malalim na lihim na hindi pa sinasabi sa kahit sino? Kung oo, bakit?"
+    },
+    {
+      "id": 15,
+      "question": "Ano ang pinakamalaking takot mo sa buhay?"
+    },
+    {
+      "id": 16,
+      "question": "Sa tingin mo ba ay posible na magkaroon ng 'forever' sa pag-ibig?"
+    },
+    {
+      "id": 17,
+      "question": "Ano ang paniniwala mo tungkol sa karma?"
+    },
+    {
+      "id": 18,
+      "question": "Ano ang pinakamahirap na desisyon na kailangan mong gawin sa buhay mo ngayon?"
+    },
+    {
+      "id": 19,
+      "question": "Sa tingin mo ba ay dapat magkaroon ng limitasyon sa pag-ibig?"
+    },
+    {
+      "id": 20,
+      "question": "Ano ang pinakanakakainis na ugali ng tao para sa iyo?"
+    },
+    {
+      "id": 21,
+      "question": "Sino ang taong hindi mo makakalimutan sa buhay mo at bakit?"
+    },
+    {
+      "id": 22,
+      "question": "Sa palagay mo ba, mas mahalaga ang pera kaysa sa kaligayahan?"
+    },
+    {
+      "id": 23,
+      "question": "Ano ang isang aral na pinakamatagal mong natutunan sa buhay?"
+    },
+    {
+      "id": 24,
+      "question": "Sa tingin mo ba ay pinahahalagahan ng tao ang mga totoong kaibigan?"
+    },
+    {
+      "id": 25,
+      "question": "Anong mga bagay ang nais mong baguhin sa iyong sarili?"
+    },
+    {
+      "id": 26,
+      "question": "Sa tingin mo ba ay dapat lagi kang maging totoo kahit masaktan ang ibang tao?"
+    },
+    {
+      "id": 27,
+      "question": "Ano ang hinahangad mo na bigla na lang mawala sa iyong buhay?"
+    },
+    {
+      "id": 28,
+      "question": "Paano mo tatanggapin ang pagsugod ng mga pagsubok sa iyong buhay?"
+    },
+    {
+      "id": 29,
+      "question": "Mayroon ka bang isang bagay na sabik kang matutunan o malaman tungkol sa iyong hinaharap?"
+    },
+    {
+      "id": 30,
+      "question": "Sa tingin mo ba ay nakatatak na sa palad ng bawat tao ang kanilang kapalaran?"
+    },
+    {
+      "id": 31,
+      "question": "Ano ang pinakamasasakit na salita na narinig mo tungkol sa iyong sarili?"
+    },
+    {
+      "id": 32,
+      "question": "Ano ang pinakamalaking pagsisisi mo tungkol sa iyong mga magulang?"
+    },
+    {
+      "id": 33,
+      "question": "Sa tingin mo ba ay totoo ang kasabihang 'love conquers all'?"
+    },
+    {
+      "id": 34,
+      "question": "Ano ang palaging nagpapasaya sa iyo sa gitna ng mga pagsubok?"
+    },
+    {
+      "id": 35,
+      "question": "Sa tingin mo, ano ang pinakamahalaga: ang nagawa mo o kung ano ang nagawa sa iyo?"
+    },
+    {
+      "id": 36,
+      "question": "Ano ang pinakamalaking banta sa mundo ngayon ayon sa iyo?"
+    },
+    {
+      "id": 37,
+      "question": "Paano mo matututunan ang tunay na halaga ng isang tao?"
+    },
+    {
+      "id": 38,
+      "question": "Ano ang pinakamalalim na kahulugan ng kaligayahan para sa iyo?"
+    },
+    {
+      "id": 39,
+      "question": "Sa tingin mo ba ay may tamang oras para sa lahat, lalo na sa pag-ibig?"
+    },
+    {
+      "id": 40,
+      "question": "Ano ang pinakamagandang araw na iyong naranasan sa iyong buhay?"
+    },
+    {
+      "id": 41,
+      "question": "Sa tingin mo ba ay may nakalaang kapalaran para sa bawat isa?"
+    },
+    {
+      "id": 42,
+      "question": "Mayroon ka bang isang bagay na pangarap mong gawin na tila hindi mo kayang abutin?"
+    },
+    {
+      "id": 43,
+      "question": "Ano ang dapat mas binibigyan ng halaga: ang ganda sa labas o ang ganda sa loob?"
+    },
+    {
+      "id": 44,
+      "question": "Kailan mo huling sinaktan ang ibang tao at bakit?"
+    },
+    {
+      "id": 45,
+      "question": "Ano ang nagpapagaan ng loob mo kapag nararamdaman mo ang kalumbayan?"
+    },
+    {
+      "id": 46,
+      "question": "Sa tingin mo, ano ang pinakamahalaga sa isang relasyon: tiwala o pag-ibig?"
+    },
+    {
+      "id": 47,
+      "question": "Ano ang pinakamalaking kahinaan mo bilang tao?"
+    },
+    {
+      "id": 48,
+      "question": "Kung binibigyan ka ng pagkakataong baguhin ang nakaraan mo, ano ang itatama mo at bakit?"
+    },
+    {
+      "id": 49,
+      "question": "Ano ang isang bagay na hindi mo maiintindihan tungkol sa iyong sarili?"
+    },
+    {
+      "id": 50,
+      "question": "Sa tingin mo, paano mo malalaman kung ikaw ba ay tunay na masaya?"
+    },
+    {
+      "id": 51,
+      "question": "Ano ang iyong pinakamalaking inspirasyon para mangarap?"
+    },
+    {
+      "id": 52,
+      "question": "Sa palagay mo ba, totoo ang kasabihang 'walang forever' sa pag-ibig?"
+    },
+    {
+      "id": 53,
+      "question": "Ano ang mga hangarin mo sa buhay na hindi pa natutupad?"
+    },
+    {
+      "id": 54,
+      "question": "Kailangan mo bang malaman ang katotohanan kahit masakit iyon?"
+    },
+    {
+      "id": 55,
+      "question": "Ano ang pinakamasasayang alaala mo noong bata ka pa?"
+    },
+    {
+      "id": 56,
+      "question": "Sa tingin mo, ano ang naging impluwensiya ng social media sa iyong mga relasyon?"
+    },
+    {
+      "id": 57,
+      "question": "Ano ang pinakamimithi mo sa isang kaibigan?"
+    },
+    {
+      "id": 58,
+      "question": "Sa palagay mo, totoo ba ang kasabihang 'love at first sight'?"
+    },
+    {
+      "id": 59,
+      "question": "Ano ang pinakamalaking hamon sa buhay mo ngayon?"
+    },
+    {
+      "id": 60,
+      "question": "Sa tingin mo ba, dapat mong ipaglaban ang isang pag-ibig kahit alam mong kakayaning mawasak?"
+    },
+    {
+      "id": 61,
+      "question": "Anu-ano ang mga bagay na nais mong iwanan sa nakaraan?"
+    },
+    {
+      "id": 62,
+      "question": "Ano ang pinakamasarap na pakiramdam na iyong nararanasan tuwing ikaw ay masaya?"
+    },
+    {
+      "id": 63,
+      "question": "Sa tingin mo, ano ang kahulugan ng 'forever'?"
+    },
+    {
+      "id": 64,
+      "question": "Ano ang iyong pinakapaborito mong kanta at bakit?"
+    },
+    {
+      "id": 65,
+      "question": "Kailan ka huling nagmahal nang sobra-sobra at ano ang naramdaman mo?"
+    },
+    {
+      "id": 66,
+      "question": "Aling kahinaan mo ang pinasasalamatan mo dahil nagtulak sa iyo upang maging mas matatag?"
+    },
+    {
+      "id": 67,
+      "question": "Anong katangian ang pinakamahalagang kinakailangan mo sa isang kasintahan?"
+    },
+    {
+      "id": 68,
+      "question": "Paano mo haharapin ang pagkakamali mo sa harap ng maraming tao?"
+    },
+    {
+      "id": 69,
+      "question": "Sa tingin mo ba, mayroong tamang panahon para sa pagmamahal?"
+    },
+    {
+      "id": 70,
+      "question": "Ano ang mga bagay na hindi mo kayang tiisin para sa isang mahal sa buhay?"
+    },
+    {
+      "id": 71,
+      "question": "Ano ang hinahangad mong ma-achieve bago matapos ang taon?"
+    },
+    {
+      "id": 72,
+      "question": "Sa paniniwala mo, may tamang edad ba para magpakasal?"
+    },
+    {
+      "id": 73,
+      "question": "Ano ang pinakanakakatuwa at pinakamasakit na pangyayari sa isang relasyon?"
+    },
+    {
+      "id": 74,
+      "question": "Sa tingin mo, ano ang pinakapatunay na ang isang tao ay tunay na nagmamahal sa iyo?"
+    },
+    {
+      "id": 75,
+      "question": "Ano ang pinakamasarap na bagay na iyong nagawa para sa iba?"
+    },
+    {
+      "id": 76,
+      "question": "Paano mo haharapin ang takot sa pagkabigo?"
+    },
+    {
+      "id": 77,
+      "question": "Ano ang mas iniisip mo: ang mga magagandang alaala o ang mga pait ng nakaraan?"
+    },
+    {
+      "id": 78,
+      "question": "Sa tingin mo, makalalim ba ang isang relasyon kahit hindi na kayo magkasama?"
+    },
+    {
+      "id": 79,
+      "question": "Ano ang pinakamalaking achievement mo sa buong buhay mo?"
+    },
+    {
+      "id": 80,
+      "question": "Sa tingin mo ba, totoo ang kasabihang 'hate is just love gone bad'?"
+    },
+    {
+      "id": 81,
+      "question": "Ano ang mga bagay na salat ka noong bata ka, pero ngayon ay madamingroon ka na?"
+    },
+    {
+      "id": 82,
+      "question": "Kailan ka huling nagpapanggap na wala kang problema, pero sa loob mo'y ikaw ay nasasaktan?"
+    },
+    {
+      "id": 83,
+      "question": "Sa tingin mo, paano mo masasabing nag-grow ka bilang tao?"
+    },
+    {
+      "id": 84,
+      "question": "Kailan mo huling sinabi ang salitang 'I love you' at saan?"
+    },
+    {
+      "id": 85,
+      "question": "Ano ang pinakamalaking pagsubok na nalampasan mo sa buhay?"
+    },
+    {
+      "id": 86,
+      "question": "Sa tingin mo ba ay dapat mong isabay ang pag-ibig at pag-aaral?"
+    },
+    {
+      "id": 87,
+      "question": "Ano ang natutunan mo sa isang nakaraang kabiguan?"
+    },
+    {
+      "id": 88,
+      "question": "Kapag may tiwala, may pag-ibig. Sa tingin mo, totoo ba ito?"
+    },
+    {
+      "id": 89,
+      "question": "Anu-ano ang mga bagay na pinaka-importante sa iyo sa isang tao?"
+    },
+    {
+      "id": 90,
+      "question": "Kailan ka huling nagbigay ng pangako at sinunod mo ba ito?"
+    },
+    {
+      "id": 91,
+      "question": "Sa tingin mo, ano ang pinakamasasayang kuwento ng pag-ibig?"
+    },
+    {
+      "id": 92,
+      "question": "Ano ang ginagawa mo kapag nararamdaman mo ang pagod na hindi napapagod ang katawan mo?"
+    },
+    {
+      "id": 93,
+      "question": "Iniisip mo ba palagi ang iyong hinaharap o mas ini-enjoy mo ang iyong kasalukuyan?"
+    },
+    {
+      "id": 94,
+      "question": "Ano ang pinaka-nakakalungkot na araw sa iyong buhay?"
+    },
+    {
+      "id": 95,
+      "question": "Sa tingin mo, ano ang pinakapag-iisipan ng ibang tao tungkol sa iyo?"
+    },
+    {
+      "id": 96,
+      "question": "Anong bagay ang gusto mong baguhin sa iyong sarili at bakit?"
+    },
+    {
+      "id": 97,
+      "question": "Kailan mo huling pinatawad ang ibang tao at bakit?"
+    },
+    {
+      "id": 98,
+      "question": "Ano ang pinakamahalagang leksyon na nais mong ituro sa mga susunod na henerasyon?"
+    },
+    {
+      "id": 99,
+      "question": "Paano mo malalaman kung ang tao ay nagpapahalaga sa iyo o ginagamit ka lang?"
+    },
+    {
+      "id": 100,
+      "question": "Ano ang pinakamasarap na pagnanais mo sa buhay na nais mong matupad?"
+    }
+  ]
+}

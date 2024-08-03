@@ -1,0 +1,404 @@
+{
+  "dare": [
+    {
+      "id": 1,
+      "question": "Magdoble lang ng balikat mo hanggang sa dulo ng kalye at pabalik-balik."
+    },
+    {
+      "id": 2,
+      "question": "Sumigaw ng 'Mahal ko si crush!' sa harap ng inyong bahay."
+    },
+    {
+      "id": 3,
+      "question": "Humiga sa gitna ng daan at magpanggap na natutulog."
+    },
+    {
+      "id": 4,
+      "question": "Magpa-tattoo ng temporary sa iyong noo ng pangalan ng iyong kaibigan."
+    },
+    {
+      "id": 5,
+      "question": "Kantahin ang national anthem ng Pilipinas gamit ang ibang banyagang tono."
+    },
+    {
+      "id": 6,
+      "question": "Abutin ang sarili ng paa at maglakad nang isang minuto."
+    },
+    {
+      "id": 7,
+      "question": "Kumanta ng pinakamalakas mong boses habang nakamumog ng shampu."
+    },
+    {
+      "id": 8,
+      "question": "Tumalon sa pool nang naka-tsinelas at damit pang-pambahay."
+    },
+    {
+      "id": 9,
+      "question": "Tawagin ang first crush mo at sabihin na mahal mo pa rin siya."
+    },
+    {
+      "id": 10,
+      "question": "Sumayaw nang sexy sa harap ng kumpletong pamilya mo."
+    },
+    {
+      "id": 11,
+      "question": "Kumain ng isang kutsarang instant noodles nang walang tubig."
+    },
+    {
+      "id": 12,
+      "question": "Isulat sa eraser ang pangalan mo at tikman ito."
+    },
+    {
+      "id": 13,
+      "question": "Maglakad na parang catwalk model sa gitna ng mall."
+    },
+    {
+      "id": 14,
+      "question": "Kausapin ng nakataas na boses ang iyong inaanak at sabihin na hindi ka galit sa kanila."
+    },
+    {
+      "id": 15,
+      "question": "Sundan ang isang estranghero ng isang minuto nang hindi sinasadya."
+    },
+    {
+      "id": 16,
+      "question": "Pwedeng magtanong ka ng dare question sa next turn mo."
+    },
+    {
+      "id": 17,
+      "question": "Ipakita ang pinakabahong larawan mo at ipadala sa lahat ng contacts mo."
+    },
+    {
+      "id": 18,
+      "question": "Sumayaw nang Gangnam style sa harap ng mga tao."
+    },
+    {
+      "id": 19,
+      "question": "Isigaw ang pangalan ng iyong crush sa harap ng klase."
+    },
+    {
+      "id": 20,
+      "question": "Kumain ng sibuyas ng buo at walang iinuming tubig."
+    },
+    {
+      "id": 21,
+      "question": "Pindutin ang doorbell ng kapitbahay at magtago."
+    },
+    {
+      "id": 22,
+      "question": "Sing pag-ibig song sa harap ng iyong ex."
+    },
+    {
+      "id": 23,
+      "question": "Subukang buksan ang pinto gamit ang iyong paa."
+    },
+    {
+      "id": 24,
+      "question": "Mag-yoga pose sa kalsada habang may mga tao."
+    },
+    {
+      "id": 25,
+      "question": "Ilapag ang iyong cellphone at hindi gamitin ng isang oras."
+    },
+    {
+      "id": 26,
+      "question": "Kumain ng saging gamit ang iyong paa."
+    },
+    {
+      "id": 27,
+      "question": "Ikuwento ang pinakamalas mo na nangyari sa'yo."
+    },
+    {
+      "id": 28,
+      "question": "Magpakagulong sa kalsada habang nagdadabog."
+    },
+    {
+      "id": 29,
+      "question": "Sumabog ng bubble gum at ilagas ito sa ulo mo ng isang minuto."
+    },
+    {
+      "id": 30,
+      "question": "Mag-usap nang palakang nakataas ang mga mata."
+    },
+    {
+      "id": 31,
+      "question": "Kumain ng kendi na natapakan sa sahig."
+    },
+    {
+      "id": 32,
+      "question": "Kantahin ang happy birthday song gamit ang animal sounds."
+    },
+    {
+      "id": 33,
+      "question": "Ipahid ang iyong mukha gamit ang takip ng bowl ng kanin."
+    },
+    {
+      "id": 34,
+      "question": "Kumanta ng national anthem ng Pilipinas nang pabulong."
+    },
+    {
+      "id": 35,
+      "question": "Sumayaw ng pinakamaliksi mong sayaw habang nakapilas."
+    },
+    {
+      "id": 36,
+      "question": "Pindutin ang collective call sa inyong office at huwag magsalita."
+    },
+    {
+      "id": 37,
+      "question": "Kumanta ng favorite love song sa mababang boses."
+    },
+    {
+      "id": 38,
+      "question": "Mag-Catwalk sa harap ng cashier ng grocery store."
+    },
+    {
+      "id": 39,
+      "question": "Sumayaw ng no touch challenge sa harap ng mga kaibigan mo."
+    },
+    {
+      "id": 40,
+      "question": "Habulin ang isang ibon ng bote sa ulo."
+    },
+    {
+      "id": 41,
+      "question": "Itapon ang iyong sapatos sa malayo."
+    },
+    {
+      "id": 42,
+      "question": "I-comment sa lahat ng post ng crush mo sa social media."
+    },
+    {
+      "id": 43,
+      "question": "Isulat sa papel ang isang lihim na pag-ibig at ihagis ito sa hangin."
+    },
+    {
+      "id": 44,
+      "question": "Umawit ng lullaby sa harap ng napakaraming tao."
+    },
+    {
+      "id": 45,
+      "question": "Sabihin sa iba mong kaibigan ang mga pinakatatagong sikreto mo."
+    },
+    {
+      "id": 46,
+      "question": "Lumingon at ngumiti sa random na tao sa mall."
+    },
+    {
+      "id": 47,
+      "question": "Kumain ng isang butil ng bawang nang hindi umiinom ng tubig."
+    },
+    {
+      "id": 48,
+      "question": "Itapon ang iyong cellphone sa basurahan at wag gamitin ng 12 oras."
+    },
+    {
+      "id": 49,
+      "question": "Mabilisang mag-online shopping ng isang item na hindi mo kailangan."
+    },
+    {
+      "id": 50,
+      "question": "Kumanta ng baby shark song sa harap ng grade school students."
+    },
+    {
+      "id": 51,
+      "question": "Sumayaw ng K-pop dance sa harap ng iyong parents."
+    },
+    {
+      "id": 52,
+      "question": "Sorpresahin ang iyong boss ng isang tight hug."
+    },
+    {
+      "id": 53,
+      "question": "Magtapon ng saranggola mula sa 3rd floor window."
+    },
+    {
+      "id": 54,
+      "question": "Magpost ng walang filter na selfie sa social media."
+    },
+    {
+      "id": 55,
+      "question": "Mag-Cartwheel sa harap ng inyong bahay."
+    },
+    {
+      "id": 56,
+      "question": "Isipin ang pinakasarap na pagkain at makatikim ito gamit ang pag-iisip lamang."
+    },
+    {
+      "id": 57,
+      "question": "Mag-movie marathon ng 5 horror films nang mag-isa."
+    },
+    {
+      "id": 58,
+      "question": "Kumain ng pekeng insekto, halimbawa plastik na gagamba."
+    },
+    {
+      "id": 59,
+      "question": "Pindutin ang pause button ng remote control ng TV ng kapitbahay mo."
+    },
+    {
+      "id": 60,
+      "question": "Magbigay ng sampal kay Crush at sabihin na love mo siya."
+    },
+    {
+      "id": 61,
+      "question": "Magtanim ng pogi/hotdog dance sa harap ng maraming tao."
+    },
+    {
+      "id": 62,
+      "question": "Kumain ng ilang tablespoon ng asin ng hindi umiinom ng tubig."
+    },
+    {
+      "id": 63,
+      "question": "Magpost ng ikaw na naka-bra/boxer sa social media."
+    },
+    {
+      "id": 64,
+      "question": "Magsimba gamit ang cosplay costume."
+    },
+    {
+      "id": 65,
+      "question": "Ipahid ang iyong lipstick sa iyong noo hanggang dulo ng ilong."
+    },
+    {
+      "id": 66,
+      "question": "Isuot ang damit ng iyong kaibigan at mag-selfie kasama sila."
+    },
+    {
+      "id": 67,
+      "question": "Kumain ng isang sandok ng chili flakes pabalik-balik."
+    },
+    {
+      "id": 68,
+      "question": "Kumanta ng favorite love song ng hindi marunong mag-ingles."
+    },
+    {
+      "id": 69,
+      "question": "Itapon ang iyong paboritong gamit sa basurahan nang walang dahilan."
+    },
+    {
+      "id": 70,
+      "question": "Malingkot na kilalanin ang lahat ng post na may vacation."
+    },
+    {
+      "id": 71,
+      "question": "Magwala sa gitna ng isang supermarket."
+    },
+    {
+      "id": 72,
+      "question": "Magbigay ng 5-star rating at positive review sa pinakamasamang restaurant na pinagkakainan mo."
+    },
+    {
+      "id": 73,
+      "question": "Ipakita ang pinakapanget na selfie mo."
+    },
+    {
+      "id": 74,
+      "question": "Kainin ang isang basong sikat."
+    },
+    {
+      "id": 75,
+      "question": "Tumawa nang malakas habang walang masabing joke."
+    },
+    {
+      "id": 76,
+      "question": "Umupo sa harap ng nagsasalita at agawin ang eksena."
+    },
+    {
+      "id": 77,
+      "question": "Kumanta nang patalikod gamit ang panyo sa mukha."
+    },
+    {
+      "id": 78,
+      "question": "Tapusin ang isang plato ng penshoppe perfume."
+    },
+    {
+      "id": 79,
+      "question": "Kumanta ng jingle ng fast food chain ng hindi nababago ang lyrics."
+    },
+    {
+      "id": 80,
+      "question": "Kumain ng isang kutsarang bawang ng hindi nagpapahinga."
+    },
+    {
+      "id": 81,
+      "question": "Ikwento sa inyo crush na mayroon ka ng ibang ka-relasyon."
+    },
+    {
+      "id": 82,
+      "question": "Pinakamalalang selfie challenge. Magpakuha ng 10 selfies nang hindi nagse-smile."
+    },
+    {
+      "id": 83,
+      "question": "Tili nang malakas kapag may tumawag sa cellphone mo sa public place."
+    },
+    {
+      "id": 84,
+      "question": "Magpromote ng item na wala ka nang balak bilhin."
+    },
+    {
+      "id": 85,
+      "question": "Kumain ng isang baso ng asin nang hindi umiinom ng tubig."
+    },
+    {
+      "id": 86,
+      "question": "Maghubad ng sapatos sa harap ng mga tao."
+    },
+    {
+      "id": 87,
+      "question": "Simulan ang pananalita mo kapag ang principal ng inyong eskwelahan ay nagsasalita."
+    },
+    {
+      "id": 88,
+      "question": "Kumanta ng love song sa harap ng iyong mga magulang."
+    },
+    {
+      "id": 89,
+      "question": "Mag-skincare routine sa harap ng mga kaibigan."
+    },
+    {
+      "id": 90,
+      "question": "Subukan ang bottle flipping challenge gamit ang mainit na kape."
+    },
+    {
+      "id": 91,
+      "question": "I-comment ang 'first' sa bawat post sa social media ng isang araw."
+    },
+    {
+      "id": 92,
+      "question": "Kumain ng isda ng hindi nagbabrushing ng ngipin pagkatapos."
+    },
+    {
+      "id": 93,
+      "question": "Mag-usap nang pahalang ang mga mata sa iyong crush."
+    },
+    {
+      "id": 94,
+      "question": "Mag-slackline sa harap ng mataas na gusali."
+    },
+    {
+      "id": 95,
+      "question": "Mag-stream ka ng live video sa social media na nag-uusap ng walang laman."
+    },
+    {
+      "id": 96,
+      "question": "Kumain ng isang pack ng sinulid bago matulog."
+    },
+    {
+      "id": 97,
+      "question": "Magdala ng guitar sa school at kantahin ang favorite love song ng crush mo."
+    },
+    {
+      "id": 98,
+      "question": "Mag-Breakdance challenge sa harap ng mga tao."
+    },
+    {
+      "id": 99,
+      "question": "Kumain ng isang pan de sal ng hindi nagpipiga ng tubig."
+    },
+    {
+      "id": 100,
+      "question": "Isang araw na hindi nagch-check ng cellphone."
+    }
+  ]
+}
