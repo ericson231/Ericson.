@@ -8,13 +8,10 @@ module.exports = {
     author: "JV Barcenas",
     countDown: 5,
     role: 1,
-    shortDescription: {
-      en: "automatically leave the chat if spammed multiple times in a short interval"
+    description: {
+      en: "Automatically leave the chat if spammed multiple times in a short interval"
     },
-    longDescription: {
-      en: "automatically leave the chat if spammed multiple times in a short interval"
-    },
-    category: "NOT CMD",
+    category: "admin",
   },
 
   onStart: async function ({ api, event }) {
@@ -37,11 +34,11 @@ module.exports = {
       '¶sammy',
       '_nano',
       'nano',
-      'dain',
-      'dainsleif',
+      'akira',
+      'akira',
       'bot',
       'Bot',
-      '@dainsleif',
+      '@akira',
       'ai',
       '.ask',
       '!ask',
