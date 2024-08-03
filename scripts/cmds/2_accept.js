@@ -8,12 +8,11 @@ module.exports = {
     author: "JV Barcenas",
     countDown: 13,
     role: 2,
-    shortDescription: "accept users",
-    longDescription: {
+    description: {
        en: "accept users"
     },
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗",
-  },
+    category: "owner",
+  }, 
 
   onReply: async function({ message, Reply, event, api, commandName }) {
     const { author, listRequest, messageID } = Reply;
