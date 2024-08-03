@@ -3,14 +3,12 @@ module.exports = {
     name: "slot",
     version: "1.0",
     author: "",
-    countDown: 13,
-    shortDescription: {
-      en: "Slot game",
-    },
-    longDescription: {
+    countDown: 15,
+    role: 0,
+    description: {
       en: "Slot game.",
     },
-    category: "𝗙𝗨𝗡/𝗚𝗔𝗠𝗘/𝗠𝗨𝗦𝗜𝗖",
+    category: "Game",
   },
   langs: {
     en: {
@@ -35,7 +33,7 @@ module.exports = {
       return message.reply(getLang("not_enough_money"));
     }
 
-    const slots = ["🍒", "🍇", "🍊", "🍉", "🍋", "🍎", "🍓", "🍑", "🥝"];
+    const slots = ["🍒", "🍇", "🍊", "🍉", "🍋", "🍎", "🍓", "🍑", "🥝", "🍈", "🍐", "🍏", "🌶️", "🥭"];
     const slot1 = slots[Math.floor(Math.random() * slots.length)];
     const slot2 = slots[Math.floor(Math.random() * slots.length)];
     const slot3 = slots[Math.floor(Math.random() * slots.length)];
@@ -72,9 +70,9 @@ function getSpinResultMessage(slot1, slot2, slot3, winnings, getLang) {
     if (slot1 === "🍒" && slot2 === "🍒" && slot3 === "🍒") {
       return getLang("jackpot_message", winnings, "🍒");
     } else {
-      return getLang("win_message", winnings) + `\[ ${slot1} | ${slot2} | ${slot3} ]`;
+      return getLang("win_message", winnings) + ` \[ ${slot1} | ${slot2} | ${slot3} ]`;
     }
   } else {
-    return getLang("lose_message", -winnings) + `\[ ${slot1} | ${slot2} | ${slot3} ]`;
+    return getLang("lose_message", -winnings) + ` \[ ${slot1} | ${slot2} | ${slot3} ]`;
   }
 }
