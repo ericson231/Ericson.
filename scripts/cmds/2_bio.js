@@ -2,20 +2,19 @@ module.exports = {
   config: {
     name: "bio",
     version: "NaN",
-    author: "Edited By AceGerome",
+    author: "NaN",
     countDown: 5,
     role: 2,
-    shortDescription: "Change the Bot Bio", 
-    longDescription: {
+    description: {
       en: "Change the bot bio",
     },
-    category: "System",
+    category: "Owner",
     guide: {
        en: "{pn} <text>",
     },
   },
   
-  onStart: async function({ args, message, api }) {
+  onStart: async function({ args, message }) {
       const text = args.join(" ");
       const count = text.length;
       
