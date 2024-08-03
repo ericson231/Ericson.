@@ -1,20 +1,16 @@
 module.exports = {
   config: {
-    name: "botgroup",
+    name: "supportgroup",
     aliases: ['joingc', 'joinsupport', 'joinbotgp'],
     version: "1.4",
     author: "jvb",
     countDown: 5,
     role: 0,
-    shortDescription: {
-      vi: "Tham gia vào nhóm chat",
-      en: "Join user to chat group"
-    },
-    longDescription: {
+    description: {
       vi: "Tham gia vào nhóm chat có sẵn",
       en: "Join user to an existing chat group"
     },
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗",
+    category: "Admin",
     guide: {
       en: "   {pn}"
     }
