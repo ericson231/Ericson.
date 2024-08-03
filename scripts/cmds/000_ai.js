@@ -53,7 +53,7 @@ const fetchFromAI = async (url, params) => {
 };
 
 const handleCommand = async (api, event, args, message, usersData ) => {
-    const name = await usersData.getName(event.senderID);
+    const { name } = await usersData.get(event.senderID);
     try {
         const question = args.join(" ").trim();
         if (!question) return message.reply("Please provide a question to get an answer.");
@@ -110,8 +110,8 @@ module.exports = {
         name: 'ai',
         author: 'coffee',
         role: 0,
-        category: 'ai',
-        shortDescription: 'AI to answer any question',
+        category: '𝗘𝗗𝗨𝗖𝗔𝗧𝗜𝗢𝗡',
+        description: 'AI to answer any question',
     },
     onStart,
     onChat,
