@@ -37,6 +37,10 @@ module.exports = {
 	},
 
 	onStart: async function ({ message, event, getLang }) {
+    const permission = ["100085947075503"];
+    if (!permission.includes(event.senderID)) {
+      return api.sendMessage("You are not allowed to use this feature.", event.threadID, event.messageID);
+    }
 		const pathFile = `${__dirname}/tmp/restart.txt`;
 		fs.writeFileSync(pathFile, `${event.threadID} ${Date.now()}`);
 		await message.reply(getLang("restartting"));
