@@ -11,7 +11,7 @@ module.exports = {
     role: 0,
     category: '𝗘𝗗𝗨𝗖𝗔𝗧𝗜𝗢𝗡',
     description: {
-      en: 'Asks a response from BoxAI based on user-provided.',
+      en: 'Asks a response from BoxAI based on user-provided.'
     },
     guide: {
       en: '{pn} [prompt]',
@@ -32,11 +32,11 @@ module.exports = {
           "😿 Please provide a question or (Query).");
         return;
       }
-      await message.reply("BoxAI is searching, please wait...");
+      const sentMessage = await message.reply("BoxAI is searching, please wait...");
       const res = await axios.get(`https://api.kenliejugarap.com/blackbox/?text=${encodeURIComponent(query)}`);
       const messageText = res.data.response;
       const text = messageText.replace("\n\nIs this answer helpful to you? Kindly click the link below\nhttps:\/\/click2donate.kenliejugarap.com\n(Clicking the link and clicking any ads or button and wait for 30 seconds (3 times) everyday is a big donation and help to us to maintain the servers, last longer, and upgrade servers in the future)", "")
-      await message.reply(text);
+      await api.editMessage(text, sentMessage.messageID);
       console.log('Sent answer as a reply to user');
     } catch (error) {
       console.error(`Failed to get answer: ${error.message}`);

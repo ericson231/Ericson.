@@ -34,8 +34,8 @@ module.exports = {
 
             try {
                 // Fetch the track information
-                const replit = "hiroshi-rest-api" + ".replit";
-                const response = await axios.get(`https://${replit}.app/search/spotify?search=${encodeURIComponent(searchQuery)}`);
+                const url = "https://hiroshi-rest-api" + ".replit.app";
+                const response = await axios.get(url + `/search/spotify?search=` + encodeURIComponent(searchQuery));
                 const trackData = response.data[0];
                 const downloadUrl = trackData.download;
 

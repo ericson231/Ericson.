@@ -1,9 +1,9 @@
 const accounts = [];
 
 function generateAccount(email, password) {
-  return `[Generate Successfully]\n` +
+  return `[Generate Successfully]\n\n` +
          `Email: ${email}\n` + 
-         `Key: ${password}`;
+         `Password: ${password}`;
 }
 
 module.exports = {
@@ -14,14 +14,11 @@ module.exports = {
     author: "?/zed | Ace",
     countDown: 5,
     role: 2,
-    shortDescription: {
-      en: "Facebook Stock Account."
-    },
-    longDescription: {
+    description: {
       en: "Stock the Account in Facebook."
     },
-    category: "𝗔𝗗𝗠𝗜𝗡/𝗢𝗪𝗡𝗘𝗥/𝗕𝗢𝗫𝗖𝗛𝗔𝗧/𝗡𝗢𝗧𝗖𝗠𝗗",
-    guides: {
+    category: "owner",
+    guide: {
       en: "   {pn} add <email> <password>"
         + "\n{pn} get - get the account"
         + "\n{pn} list - To view account list"
@@ -30,6 +27,8 @@ module.exports = {
   
   onStart: async function ({ api, event, args }) {
   const [action] = args;
+  const { getPrefix } = global.utils;
+  const p = getPrefix(event.threadID); 
 
   if (action === "get") {
     if (accounts.length > 0) {
@@ -49,7 +48,7 @@ module.exports = {
   } else if (action === "list") {
     api.sendMessage(`Number of stocked accounts: ${accounts.length}`, event.threadID);
   } else {
-    api.sendMessage("Invalid format. Usage: !fbacc get or !fbacc add <email> <password> or !fbacc list", event.threadID);
+    api.sendMessage("Invalid format. Usage: ${p}fbacc get or ${p}fbacc add <email> <password> or ${p}fbacc list", event.threadID);
     }
   },
 };

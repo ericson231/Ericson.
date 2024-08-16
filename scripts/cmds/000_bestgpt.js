@@ -17,16 +17,13 @@ module.exports = {
 
   onStart: async function ({ api, event, args, usersData }) {
     try {
-      const BoxID = "61562919594080";
+      const BoxID = "61552488179337";
       const query = args.join(" ") || "hello";
       const { name } = (await usersData.get(event.senderID));
 
       if (query) {
         api.setMessageReaction("⏳", event.messageID, (err) => console.log(err), true);
-        const processingMessage = await api.sendMessage(
-          `Asking Best GPT. Please wait a moment...`,
-          BoxID
-        );
+        const processingMessage = await api.sendMessage(`Asking Best GPT. Please wait a moment...`, BoxID);
 
         const apiUrl = `https://liaspark.chatbotcommunity.ltd/@unregistered/api/bestgpt?key=j86bwkwo-8hako-12C&userName=${encodeURIComponent(name || "a user")}&query=${encodeURIComponent(query)}`;
         const response = await axios.get(apiUrl);

@@ -15,7 +15,7 @@ module.exports = {
     }
   },
 
-  onStart: async function ({ api, event, args }) {
+  onStart: async function ({ args, message }) {
     const axios = require("axios");
     const prefix = global.GoatBot.config.prefix;
     const commandName = this.config.name;

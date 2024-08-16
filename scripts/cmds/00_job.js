@@ -35,7 +35,7 @@ module.exports = {
       reply: "Reply to this message with: Gwapo si [admin name] (ace, akira)",
       alreadyReceived: "You have already received the gift",
       received: "You have received %1 coin and %2 exp",
-      jobCompleted: "Grats choyy! You have earned $300 for your job pagpatuloy mo lang.",
+      jobCompleted: "Grats choyy! You have earned $1000 for your job pagpatuloy mo lang.",
       alreadyJobCompleted: "Sorry hehe, come back tomorrow gwapo ko na kase"
     }
   },
@@ -108,7 +108,7 @@ module.exports = {
 
       // Add money to user's bank data
       const userID = event.senderID.toString();
-      const amountToAdd = 300;
+      const amountToAdd = 1000;
       if (bankData[userID]) {
         bankData[userID].bank += amountToAdd;
       } else {

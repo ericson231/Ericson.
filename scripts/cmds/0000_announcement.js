@@ -16,7 +16,7 @@ module.exports = {
     description: {
       en: 'Create or display server announcements'
     },
-    category: 'announcement',
+    category: 'admin',
     guide: {
       en: '   {pn} [post|create]: To create a new announcement\n   {pn}: To display the current announcement'
     },
@@ -33,7 +33,7 @@ module.exports = {
 
   onStart: async function ({ args, message, api, event }) {
     const { senderID } = event;
-    const announcementFilePath = path.join(__dirname, 'announcement.txt');
+    const announcementFilePath = path.join(__dirname, '/JSON/announcement.txt');
 
     
     if (args[0] === 'post' || args[0] === 'create') {

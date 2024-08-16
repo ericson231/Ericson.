@@ -1,7 +1,7 @@
 module.exports = {
 	config: {
-		name: "ttt",
-    aliases: ['tictactoe'],
+		name: "tictactoe",
+    aliases: ['ttt'],
 		version: "1.1",
 		author: "Samir",
 		countDown:35,
@@ -23,7 +23,7 @@ onStart: async function ({ event, message, api, usersData, args}) {
       } else {
           if (event.senderID == global.game[event.threadID].player1.id || event.senderID == global.game[event.threadID].player2.id ){
           if(event.senderID == global.game[event.threadID].player1.id){
-    message.reply({body:`What a cry baby. ${global.game[event.threadID].player1.name} left the game.\nWinner is ${global.game[event.threadID].player2.name}.`, mentions: [{
+    message.reply({body:`What a cry baby.\n${global.game[event.threadID].player1.name} left the game.\nWinner is ${global.game[event.threadID].player2.name}.`, mentions: [{
                         tag: global.game[event.threadID].player1.name,
                         id: global.game[event.threadID].player1.id,
         
@@ -36,7 +36,7 @@ onStart: async function ({ event, message, api, usersData, args}) {
         
                     })
       } else {
-    message.reply({body:`What a cry baby. ${global.game[event.threadID].player2.name} left the game.\nWinner is ${global.game[event.threadID].player1.name}.`, mentions: [{
+    message.reply({body:`What a cry baby. \n${global.game[event.threadID].player2.name} left the game.\nWinner is ${global.game[event.threadID].player1.name}.`, mentions: [{
                         tag: global.game[event.threadID].player1.name,
                         id: global.game[event.threadID].player1.id,
         

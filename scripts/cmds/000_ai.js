@@ -1,119 +1,85 @@
 const axios = require('axios');
-const moment = require('moment-timezone');
-const NodeCache = require('node-cache');
-// Initialize cache
-const cache = new NodeCache({ stdTTL: 600, checkperiod: 120 });
 
-// Add more Apis or Ai services here.
-const services = [
-    { url: 'http://markdevs-last-api.onrender.com/api/v2/gpt4', param: 'query' },
-    { url: 'https://markdevs-last-api.onrender.com/api/v3/gpt4', param: 'ask' },
-    { url: 'https://markdevs-last-api.onrender.com/gpt4', param: 'prompt', uid: 'uid' }
+const Prefixes = [
+  'gpt',
+  '/gpt',
+  'ai',
+  '/ai'
 ];
 
-const designatedHeader = "卂Ҝ|尺卂 シ︎";
-
-const getAIResponse = async (question, messageID) => {
-    // Check if response is cached
-    const cachedResponse = cache.get(question);
-    if (cachedResponse) {
-        return { response: cachedResponse, messageID };
-    }
-
-    const response = await getAnswerFromAI(question.trim() || "hi");
-    // Cache the response
-    cache.set(question, response);
-    return { response, messageID };
-};
-
-const getAnswerFromAI = async (question) => {
-    const promises = services.map(({ url, param, uid }) => {
-        const params = uid ? { [param]: question, [uid]: '100085947075503' } : { [param]: question };
-        return fetchFromAI(url, params);
-    });
-
-    const responses = await Promise.allSettled(promises);
-    for (const { status, value } of responses) {
-        if (status === 'fulfilled' && value) {
-            return value;
-        }
-    }
-
-    throw new Error("No valid response from any AI service");
-};
-
-const fetchFromAI = async (url, params) => {
-    try {
-        const { data } = await axios.get(url, { params });
-        return data.gpt4 || data.reply || data.response || data.answer || data.message;
-    } catch (error) {
-        console.error("Network Error:", error.message);
-        return null;
-    }
-};
-
-const handleCommand = async (api, event, args, message, usersData ) => {
-    const { name } = await usersData.get(event.senderID);
-    try {
-        const question = args.join(" ").trim();
-        if (!question) return message.reply("Please provide a question to get an answer.");
-        const { response, messageID } = await getAIResponse(question, event.messageID);
-        api.sendMessage(`🧸 | 卂Ҝ|尺卂 シ︎\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━\n🗣️ Asked by: ${name}\n⏰ 𝑅𝑒𝑠𝑝𝑜𝑛𝑑 𝑇𝑖𝑚𝑒: ${moment.tz("Asia/Manila").format("DD/MM/YYYY, h:mm:ss A")}`, event.threadID, messageID);
-    } catch (error) {
-        console.error("Error in handleCommand:", error.message);
-        message.reply("An error occurred while processing your request.");
-    }
-};
-
-const onStart = async ({ api, event, args, usersData }) => {
-    const name = await usersData.getName(event.senderID);
-    try {
-        const input = args.join(' ').trim();
-        const { response, messageID } = await getAIResponse(input, event.messageID);
-        api.sendMessage(`🧸 | 卂Ҝ|尺卂 シ︎\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━\n🗣️ Asked by: ${name}\n⏰ 𝑅𝑒𝑠𝑝𝑜𝑛𝑑 𝑇𝑖𝑚𝑒: ${moment.tz("Asia/Manila").format("DD/MM/YYYY, h:mm:ss A")}`, event.threadID, messageID);
-    } catch (error) {
-        console.error("Error in onStart:", error.message);
-        api.sendMessage("An error occurred while processing your request.", event.threadID);
-    }
-};
-
-const onChat = async ({ event, api, usersData }) => {
-    const name = await usersData.getName(event.senderID);
-    const messageContent = event.body.trim().toLowerCase();
-    const isReplyToBot = event.messageReply && event.messageReply.senderID === api.getCurrentUserID();
-    const isDirectMessage = messageContent.startsWith("ai") && event.senderID !== api.getCurrentUserID();
-
-    if (isReplyToBot) {
-        const repliedMessage = event.messageReply.body || "";
-        if (!repliedMessage.startsWith(designatedHeader)) {
-            return;
-        }
-    }
-
-    if (isReplyToBot || isDirectMessage) {
-        const userMessage = isDirectMessage ? messageContent.replace(/^ai\s*/, "").trim() : messageContent;
-        const botReplyMessage = isReplyToBot ? event.messageReply.body : "";
-        const input = `${botReplyMessage}\n${userMessage}`.trim();
-
-        try {
-            const { response, messageID } = await getAIResponse(input, event.messageID);
-            api.sendMessage(`🧸 | 卂Ҝ|尺卂 シ︎\n━━━━━━━━━━━━━━━━\n${response}\n━━━━━━━━━━━━━━━━\n🗣️ Asked by: ${name}\n⏰ 𝑅𝑒𝑠𝑝𝑜𝑛𝑑 𝑇𝑖𝑚𝑒: ${moment.tz("Asia/Manila").format("DD/MM/YYYY, h:mm:ss A")}`, event.threadID, messageID);
-        } catch (error) {
-            console.error("Error in onChat:", error.message);
-            api.sendMessage("An error occurred while processing your request.", event.threadID);
-        }
-    }
-};
-
 module.exports = {
-    config: {
-        name: 'ai',
-        author: 'coffee',
-        role: 0,
-        category: '𝗘𝗗𝗨𝗖𝗔𝗧𝗜𝗢𝗡',
-        description: 'AI to answer any question',
+  config: {
+    name: 'ai',
+    //aliases: ["ai"],
+    version: '2.5',
+    author: 'JV Barcenas', // do not change
+    role: 0,
+    category: 'ai',
+    description: {
+      en: 'Asks an AI for an answer based on the user prompt.',
     },
-    onStart,
-    onChat,
-    handleCommand
+    guide: {
+      en: '{pn} [prompt]',
+    },
+  },
+  onStart: async function () {},
+  onChat: async function ({ api, event, args, message }) {
+    try {
+      const prefix = Prefixes.find((p) => event.body && event.body.toLowerCase().startsWith(p));
+
+      if (!prefix) {
+        return; 
+      }
+
+      const prompt = event.body.substring(prefix.length).trim() || "Hello";
+      
+      if (prompt) {
+        const sentMessage = await message.reply("Answering your question. Please wait a moment...");
+
+        let respond = "Sorry, I couldn't generate an answer.";
+        
+        try {
+          const response = await axios.get(`https://celestial-dainsleif-v2.onrender.com/gpt?gpt=${prompt}`);
+          respond = response.data.content.trim();
+        } catch (error) {
+          console.error("❌ | Primary API failed for answer generation", error); 
+          try {
+            const response = await axios.get(`https://akhiroai.onrender.com/api?model=llama&q=${prompt}`);
+            respond = response.data.message;
+          } catch (error) {
+            console.error("❌ | Secondary API failed for answer generation", error);
+            try {
+              const response = await axios.get(`https://akhiroai.onrender.com/api?model=hercai&q=${prompt}`);
+              respond = response.data.message;
+            } catch (error) {
+              console.error("❌ | Third API failed for answer generation", error); 
+              try {
+                const response = await axios.get(`https://akhiroai.onrender.com/api?model=gemini&q=${prompt}`);
+                respond = response.data.message;
+              } catch (error) {
+                console.error("❌ | Fourth API failed for answer generation", error); 
+                try {
+                  const response = await axios.get(`https://akhiroai.onrender.com/api?model=chatgpt&q=${prompt}`);
+                  respond = response.data.message;
+                } catch (error) {
+                  console.error("❌ | Fifth API failed for answer generation", error); 
+                  
+                  return api.sendMessage(
+                    "You can try typing your question again or resending it, as there might be a bug from the server that's causing the problem. It might resolve the issue.",
+                    event.threadID,
+                    event.messageID
+                  );
+                }
+              }
+            }
+          }
+        }
+
+        await api.editMessage(respond, sentMessage.messageID);
+        console.log('Sent answer as a reply to user');
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred:", error);
+    }
+  }
 };

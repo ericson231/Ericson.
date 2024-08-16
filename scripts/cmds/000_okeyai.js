@@ -33,7 +33,7 @@ module.exports = {
             const axios = require("axios");
             const getUserInfo = async (api, userID) => {
                 try {
-                    const name = await api.getUserInfo(userID);
+                    const name = awaita api.getUserInfo(userID);
                     return name[userID].firstName;
                 } catch (error) {
                     console.error(`${error}`);

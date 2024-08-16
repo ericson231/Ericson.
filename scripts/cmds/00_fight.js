@@ -26,7 +26,7 @@ module.exports = {
     if (ongoingFights.has(threadID)) {
       return message.send("⚔️ A fight is already in progress in this group.");
     }
-
+    
     const mention = Object.keys(event.mentions);
 
     if (mention.length !== 1) {

@@ -42,7 +42,7 @@ module.exports = {
 
         const mention = Object.keys(event.mentions);
         if (mention.length === 0) return api.sendMessage("Please mention someone.ex : @mention | text", event.threadID, event.messageID);
-
+            
         const mentionedUserID = mention[0];
         const mentionedUserProfilePic = await getUserProfilePic(mentionedUserID);
 
@@ -99,7 +99,7 @@ module.exports = {
         ctx.fillStyle = '#FFFFFF'; 
         ctx.fillText(text, textBoxX + textBoxWidth / 2, textBoxY + textBoxHeight / 2);
 
-        const imgPath = path.join(__dirname, "cache", `result_image.png`);
+        const imgPath = path.join(__dirname, "tmp", `result_image.png`);
         const out = fs.createWriteStream(imgPath);
         const stream = canvas.createPNGStream();
         stream.pipe(out);

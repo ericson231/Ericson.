@@ -57,7 +57,7 @@ module.exports = {
 
 async function getMessage(yourMessage, langCode) {
 	try {
-		const res = await axios.get(`https://var api.kenliejugarap.com/blackbox?text=${yourMessage}`);
+		const res = await axios.get(`https://api.kenliejugarap.com/blackbox?text=${yourMessage}`);
 		if (!res.data.response) {
 			throw new Error('Please contact Kenlie Navacilla Jugarap if this error spams...');
 		}

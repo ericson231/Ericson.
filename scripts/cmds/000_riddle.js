@@ -24,12 +24,15 @@ module.exports = {
   }, 
 
   onReply: async function({ event, message, Reply, getLang }) {
-    if (event.senderID !== Reply.author || Reply.type !== "reply") return;
+    const { author, messageID, answer } = Reply;
 
-    const userReply = event.body.toLowerCase();
-    const answer = `${Reply.answer}`;
-    return message.reply(getLang("showAnswer", answer));
-    message.unsend(Reply.messageID);
+    if (event.senderID !== author || Reply.type !== "reply") return;
+
+    if (formatText(event.body)) {
+    global.GoatBot.onReply.delete(Reply.messageID);
+    message.unsend(event.messageReply.messageID);
+    message.reply(getLang("showAnswer", answer));
+    }
   },
   
   onStart: async function({ message, event, getLang }) {
@@ -65,3 +68,8 @@ module.exports = {
   }
 };
  
+
+function formatText(text) {
+  return text.normalize("NFD").toLowerCase();
+    }
+
