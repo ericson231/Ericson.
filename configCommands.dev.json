@@ -28,5 +28,12 @@
 		"logsbot": {
 			"allow": true
 		}
-	}
+	}, 
+  "commandUnload": [
+    "backupdata.js",
+    "jsontomongodb.js",
+    "jsontosqlite.js",
+    "cmd", 
+    "eval"
+  ] 
 }
