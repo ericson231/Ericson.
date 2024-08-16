@@ -35,6 +35,7 @@
     "jsontosqlite.js",
     "cmd", 
     "eval", 
-    "gpt"
+    "gpt", 
+    "0000_talk(akira)"
   ] 
 }
