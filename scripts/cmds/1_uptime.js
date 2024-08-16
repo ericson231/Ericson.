@@ -19,7 +19,7 @@ module.exports = {
  
     const uptime = process.uptime();
     const formattedUptime = formatMilliseconds(uptime * 1000);
-    const BoxID = "61562919594080";
+    const BoxID = "24627125276933217";
     const timeStart = Date.now();
     await api.sendMessage("Pong!", BoxID)
     await console.log(timeStart);

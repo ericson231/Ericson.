@@ -13,7 +13,7 @@ module.exports = {
     },
     category: 'fun',
     guide: {
-      en: 'To use this command, type {pn} fact to send random fact, {pn} joke to send random joke, {pn} lines to send random lines, {pn} poem to send random lines in poem, {pn} quote to send random quotes, and {pn} bored to send random activity suggestions.',
+      en: 'To use this command, type {pn} fact to send random fact, \n{pn} joke to send random joke, \n{pn} lines to send random lines, \n{pn} poem to send random lines in poem, \n{pn} quote to send random quotes.',
     },
   },
 
@@ -139,7 +139,7 @@ const response = await axios.get(`https://v2.jokeapi.dev/joke/Any`);
       } else {
         message.reply(
           {
-            body: '⚠ Usage guide:\nTo use this command, type /random fact — to send random fact,\n /random joke - to send random joke,\n /random lines - to send random lines,\n /random poem - to send random lines in poem,\n /random quote - to send random quotes,\n /random bored - to send random activity suggestions.',
+            body: '⚠ Usage guide:\nTo use this command, type /random fact — to send random fact,\n /random joke - to send random joke,\n /random lines - to send random lines,\n /random poem - to send random lines in poem,\n /random quote - to send random quotes.',
             attachment: null,
          });
         return;

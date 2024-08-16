@@ -58,7 +58,7 @@ module.exports = {
     const userData = await usersData.get(event.senderID);
     const requiredMoney = "1000000";
     if (requiredMoney > userData.money) {
-      return message.reply("You dont have ${requiredMoney} money to make war.");
+      return message.reply(`You dont have ${requiredMoney} money to make war.`);
     }
     if (mention.length !== 1) {
         message.reply("Please mention one person to make war.");

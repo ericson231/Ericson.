@@ -88,14 +88,14 @@ module.exports = {
 }, 
 
   onReply: async function({ api, event, args, Reply, message }) {
-    if (event.senderID != onReply.author) return; 
+    if (event.senderID != Reply.author) return; 
     const fs = require("fs-extra");
     var arrnum = event.body.split(" ");
     var msg = "";
     var nums = arrnum.map(n => parseInt(n));
 
     for (let num of nums) {
-    var target = onReply.files[num-1];
+    var target = Reply.files[num-1];
     var fileOrdir = fs.statSync(__dirname + '/' + target);
         if (fileOrdir.isDirectory() == true) {
           var typef = "[Folder🗂️]";
@@ -105,7 +105,7 @@ module.exports = {
           var typef = "[File📄]";
           fs.unlinkSync(__dirname + "/" + target);
         }
-        msg += typef + ' ' + onReply.files[num-1] + "\n";
+        msg += typef + ' ' + Reply.files[num-1] + "\n";
   }
   message.reply("Deleted the following files in the commands folder:\n\n" + msg);
  }

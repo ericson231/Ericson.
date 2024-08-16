@@ -43,7 +43,6 @@ module.exports = {
     } catch (error) {
       console.error(error);
       api.sendMessage("Error!", event.threadID);
-      }
     }
   },
 };

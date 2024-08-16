@@ -7,7 +7,7 @@ module.exports = {
     countDown: 15,
     role: 0,
     description: {
-      en: "Akira chose the things/food/place provided by user."
+      en: "Akira chose things/food/place."
     },
     category: "fun",
     guide: {
@@ -26,7 +26,7 @@ module.exports = {
 	var input = args.join(" ").trim();
 	
 	if (!input) {
-	    message.reply("Invalid. Type /choose <choose1> or <choose2>", event.threadID, event.messageID);
+	    message.reply("Invalid. Type /choose <choose1> or <choose2>");
     return;
 	}
 	
@@ -35,3 +35,4 @@ module.exports = {
 	return message.reply(getLang("result", array[Math.floor(Math.random() * array.length)]));
  }
 };
+!

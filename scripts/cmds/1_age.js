@@ -6,7 +6,7 @@ module.exports = {
     role: 0,
     category: "info",
     description: {
-      en: "mention your friend and write something to post✍️",
+      en: "Show your age based on your birthmonth",
     },
   },
 

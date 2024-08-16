@@ -2,10 +2,10 @@ const axios = require('axios');
 
 module.exports = {
   config: {
-    name: "programmingJoke",
-    aliases: ['programjoke'],
+    name: "programeme",
+    //aliases: ['programjoke'],
     version: "1.0.0",
-    author: "August quinn | Ace",
+    author: "Ace",
     countDown: 10,
     role: 0,
     description: {
@@ -17,15 +17,23 @@ module.exports = {
     } 
   },
   
-  onStart: async function({ api, event }) {
+  onStart: async function({ event, api }) {
   try {
-    const response = await axios.get(`https://official-joke-api` + `.appspot.com/jokes/programming/random`);
-    const joke = response.data[0];
-
-    message.reply(`💻 𝗣𝗥𝗢𝗚𝗥𝗔𝗠𝗠𝗜𝗡𝗚 𝗝𝗢𝗞𝗘:\n\n${joke.setup}\n${joke.punchline}`);
+    const url = 'https://celestial-dainsleif-v2.onrender.com/programeme';
+    const response = await axios.get(url);
+    const { title, imageUrl } = response.data[0];
+    
+    const form = {
+        body: title,
+        attachment: []
+    }; 
+    
+    form.attachment[0] = await global.utils.getStreamFromURL(imageUrl);
+      api.sendMessage(form, event.threadID, event.messageID);
+    
   } catch (error) {
     console.error(error);
-    message.reply('An error occurred: ' + error);
+    api.sendMessage('An error occurred: ' + error.message, event.threadID);
   }
  }
 };

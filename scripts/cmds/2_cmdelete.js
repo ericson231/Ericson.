@@ -17,34 +17,33 @@ module.exports = {
     } 
   },
 
-onStart: async function({ api, event, args, message }) {
-  const { threadID, senderID } = event;
+onStart: async function({ args, message }) {
   const permission = ["100085947075503"];
   if (!permission.includes(senderID)) {
-    return message.reply("You are not authorized to use this command.", threadID);
+    return message.reply("You are not authorized to use this command.");
   }
 
   if (args.length !== 1) {
-    return message.reply("Please use the correct format: /delete <filename>", threadID);
+    return message.reply("Please use the correct format: /delete <filename>");
   }
 
   const filename = args[0];
 
-  const filePath = __dirname + `${filename}.js`;
+  const filePath = __dirname + `/${filename}.js`;
 
   console.log(`Attempting to delete: ${filePath}.js`);
 
   try {
     if (fs.existsSync(filePath)) {
       fs.unlinkSync(filePath);
-      message.reply(`Command ${filename} has been deleted.`, threadID);
+      message.reply(`Command ${filename} has been deleted.`);
       console.log(`Deleted: ${filePath}.js`);
     } else {
-      message.reply(`File ${filename}.jd not found. No commands were deleted.`, threadID);
+      message.reply(`File ${filename}.js not found. No commands were deleted.`);
       console.log(`File not found: ${filePath}.js`);
     }
   } catch (error) {
-    message.reply("An error occurred while deleting the command.", threadID);
+    message.reply("An error occurred while deleting the command.");
     console.error(error);
   }
  }

@@ -17,10 +17,9 @@ module.exports = {
     } 
   },
   
-  onStart: async function ({ args, message, event, usersData }) {
+  onStart: async function ({ args, message, event }) {
     const p = global.GoatBot.config.prefix;
     const command = args[0];
-    const userData = await usersData.get(event.senderID);
 
     if (command === "levelup") {
 
@@ -28,17 +27,9 @@ module.exports = {
       const reward = result ? 1000 : -500; // Adjust the reward
       const lostReward = Math.abs(reward);
       if (result) {
-        await usersData.set(event.senderID, {
-          money: userData.money + reward,
-          data: userData.data,
-        });
-        return message.reply(`You successfully completed the level up challenge and earned ${reward} $. Congratulations!`);
+        return message.reply(`You successfully completed the level up challenge. Congratulations!`);
       } else {
-        await usersData.set(event.senderID, {
-          money: userData.money + -lostReward,
-          data: userData.data,
-        });
-        return message.reply(`The level up challenge didn't go as planned. You lost ${lostReward} $. Better luck next time.`);
+        return message.reply(`The level up challenge didn't go as planned. Better luck next time.`);
       }
     } else if (command === "guessingGame") {
       // Guessing Game: Make it a fun game
@@ -49,11 +40,7 @@ module.exports = {
         const rewards = ["200", "300", "250", "150"]; // Reward Amount
         const rw = Math.floor(Math.random() * rewards.length);
         const reward = rewards[rw];
-        await usersData.set(event.senderID, {
-          money: userData.money + reward,
-          data: userData.data,
-        });
-        return message.reply(`Congratulations! You won the guessing game and earned ${reward} $.`);
+        return message.reply(`Congratulations! You won the guessing game and earned fake ${reward} $.`);
       } else {
         return message.reply("Try guessing a number between 0 and 9.");
       }
@@ -62,17 +49,9 @@ module.exports = {
       const lucky = Math.random() > 0.5;
       const reward = lucky ? 1000 : -500; // Reward amount
       if (lucky) {
-        await usersData.set(event.senderID, {
-          money: userData.money + 1000,
-          data: userData.data,
-        });
-        return message.reply("Luck was on your side! You passed the luck test and earned 1000 $.");
+        return message.reply("Luck was on your side! You passed the luck test.");
       } else {
-        await usersData.set(event.senderID, {
-          money: userData.money + -500,
-          data: userData.data,
-        });
-        return message.reply("Unfortunately, luck wasn't on your side this time. You lost 500 $.");
+        return message.reply("Unfortunately, luck wasn't on your side this time.");
       }
     } else if (command === "showAll") {
       // Provide a list of available work commands

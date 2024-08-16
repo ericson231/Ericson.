@@ -14,12 +14,8 @@ module.exports = {
     category: "admin",
   },
 
-  onStart: async function ({ api, event }) {
-    return api.sendMessage(
-      `Automatically leave the chat if spammed multiple times in a short interval`,
-      event.threadID,
-      event.messageID
-    );
+  onStart: async function ({ message }) {
+    return message.reply(`Automatically leave the chat if spammed multiple times in a short interval`);
   },
 
   onChat: async function ({ api, event, usersData, threadsData }) {
