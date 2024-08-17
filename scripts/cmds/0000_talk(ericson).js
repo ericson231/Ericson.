@@ -22,20 +22,20 @@ module.exports = {
     countDown: 5,
     role: 0,
     description: {
-      en: 'Talk with Akira Ai ♡'
+      en: 'Talk with Ericson Ai '
     },
     category: 'fun',
     guide: {
-      en: ' {pn} [on | off]: on/off Akira Ai ♡' 
-        + '\n{pn} <word>: chat with Akira Ai ♡' 
+      en: ' {pn} [on | off]: on/off Ericson Ai ' 
+        + '\n{pn} <word>: chat with Ericson Ai ' 
         + '\nExample:\n{pn} hi'
     }
   },
   langs: {
     en: {
-      turnedOn: 'Turned on Akira-AI ♡ successfully!',
-      turnedOff: 'Turned off Akira-AI ♡ successfully!',
-      chatting: 'Already Chatting with Akira-AI ♡...',
+      turnedOn: 'Turned on Ericson-AI  successfully!',
+      turnedOff: 'Turned off Ericson-AI  successfully!',
+      chatting: 'Already Chatting with Ericson-AI ...',
       error: 'Huh?🙂'
     }
   },
